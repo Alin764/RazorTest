@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<!--Nullable>enable</Nullable-->
-		<ImplicitUsings>enable</ImplicitUsings>
-		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!--Nullable>enable</Nullable-->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<Compile Remove="Views\**\*.cs" />
-		<Compile Include="Views\**\*.cs" DependentUpon="%(Filename).cshtml" />
-	</ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\**\*.cs" />
+    <Compile Include="Views\**\*.cs" DependentUpon="%(Filename).cshtml" />
+    <EmbeddedResource Include="Views\**\*.cshtml" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.9" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.9" />
-		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.9" />
-	</ItemGroup>	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.9" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.9" />
+  </ItemGroup>
 
 </Project>
